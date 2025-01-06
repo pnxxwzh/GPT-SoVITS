@@ -42,7 +42,7 @@ class SceneManager:
 2. 场景描述要准确，不要出现不存在的场景
 3. 不要增加输入中不存在的信息
 
-只返回更新后的场景，不要输出任何其他内容
+用一段话描述更新后的场景，不要输出任何其他内容，也不要推测故事的发展
 
 """
 
@@ -113,7 +113,7 @@ class SceneManager:
                             {"role": "system", "content": self.scene_analysis_prompt},
                             {"role": "user", "content": analysis_prompt}
                         ],
-                        "temperature": 0.4,
+                        "temperature": 0.3,
                         "max_tokens": 500,
                         "top_p": 0.9,
                         "presence_penalty": 0.6,
